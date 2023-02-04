@@ -2,7 +2,7 @@ import 'package:player_stats_23/State/VideoAdState.dart';
 import 'package:player_stats_23/ads/BannerAdSmall.dart';
 import 'package:player_stats_23/ads/ad_helper.dart';
 import 'package:player_stats_23/components/ClubDetails.dart';
-//import 'package:player_stats_23/ads/MediumNativeAd.dart';
+import 'package:player_stats_23/ads/MediumNativeAd.dart';
 import 'package:player_stats_23/components/GameAttributes.dart';
 import 'package:player_stats_23/components/PlayerDetailsRatingCard.dart';
 import 'package:player_stats_23/components/SkillsRating.dart';
@@ -116,7 +116,7 @@ class _PlayerDetailsState extends ConsumerState<PlayerDetails> {
                           ClubDetails(
                             clubData: playerDetails,
                           ),
-                          //MediumNativeAd(),
+                          MediumNativeAd(),
                           GameAttributes(
                             gameData: playerDetails,
                           ),
