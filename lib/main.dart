@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Fifa Stats',
+      title: 'Fifa 23 Stats',
       themeMode: ThemeMode.dark,
       darkTheme: ThemeClass.darkTheme,
       theme: ThemeClass.lightTheme,
