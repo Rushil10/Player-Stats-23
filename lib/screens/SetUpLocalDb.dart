@@ -1,4 +1,4 @@
-//import 'package:player_stats_23/ads/BannerAdSmall.dart';
+import 'package:player_stats_23/ads/BannerAdSmall.dart';
 import 'package:player_stats_23/db/configureDB.dart';
 import 'package:player_stats_23/db/players22.dart';
 import 'package:player_stats_23/screens/BottomTabs.dart';
@@ -176,7 +176,7 @@ class _SetUpLocalDbState extends State<SetUpLocalDb> {
                         ),
                       ],
                     )),
-                    //BannerSmallAd(),
+                    BannerSmallAd(),
                   ],
                 )
               : Center(

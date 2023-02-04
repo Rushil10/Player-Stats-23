@@ -1,9 +1,10 @@
-//import 'package:player_stats_23/ads/ad_helper.dart';
+import 'package:player_stats_23/ads/ad_helper.dart';
 import 'package:player_stats_23/components/playerCard.dart';
 import 'package:player_stats_23/db/players22.dart';
 import 'package:player_stats_23/utlis/CustomColors.dart';
+import 'package:player_stats_23/ads/BannerAdSmall.dart';
 import 'package:flutter/material.dart';
-//import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 class Favourites extends StatefulWidget {
   final type;
@@ -19,7 +20,7 @@ class _FavouritesState extends State<Favourites> {
   @override
   var loading = true;
   var players = [];
-  //InterstitialAd? _interstitialAd;
+  InterstitialAd? _interstitialAd;
 
   void initState() {
     super.initState();
@@ -38,7 +39,7 @@ class _FavouritesState extends State<Favourites> {
   }
 
   void addInterstitialAd() async {
-    /* InterstitialAd.load(
+    InterstitialAd.load(
         adUnitId: AdHelper.videoAdUnitId,
         request: AdRequest(),
         adLoadCallback: InterstitialAdLoadCallback(
@@ -52,7 +53,7 @@ class _FavouritesState extends State<Favourites> {
           onAdFailedToLoad: (LoadAdError error) {
             print('InterstitialAd failed to load: $error.');
           },
-        )); */
+        ));
   }
 
   void getFavouritePlayers() async {
@@ -132,7 +133,7 @@ class _FavouritesState extends State<Favourites> {
                               playerData: players[index],
                             );
                           })),
-                  //BannerSmallAd(),
+                  BannerSmallAd(),
                 ],
               )
             : Center(

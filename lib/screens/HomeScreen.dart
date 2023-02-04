@@ -1,12 +1,12 @@
 import 'package:player_stats_23/State/VideoAdState.dart';
-//import 'package:player_stats_23/ads/BannerAdSmall.dart';
-//import 'package:player_stats_23/ads/ad_helper.dart';
+import 'package:player_stats_23/ads/BannerAdSmall.dart';
+import 'package:player_stats_23/ads/ad_helper.dart';
 import 'package:player_stats_23/components/playerCard.dart';
 import 'package:player_stats_23/db/players22.dart';
 import 'package:player_stats_23/screens/FavouritesScreen.dart';
 import 'package:player_stats_23/utlis/CustomColors.dart';
 import 'package:flutter/material.dart';
-//import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
@@ -156,7 +156,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                               playerData: players[index],
                             );
                           })),
-                  //BannerSmallAd(),
+                  BannerSmallAd(),
                 ],
               )
             : Center(

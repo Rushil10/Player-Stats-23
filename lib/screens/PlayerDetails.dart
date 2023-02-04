@@ -1,6 +1,6 @@
 import 'package:player_stats_23/State/VideoAdState.dart';
-//import 'package:player_stats_23/ads/BannerAdSmall.dart';
-//import 'package:player_stats_23/ads/ad_helper.dart';
+import 'package:player_stats_23/ads/BannerAdSmall.dart';
+import 'package:player_stats_23/ads/ad_helper.dart';
 import 'package:player_stats_23/components/ClubDetails.dart';
 //import 'package:player_stats_23/ads/MediumNativeAd.dart';
 import 'package:player_stats_23/components/GameAttributes.dart';
@@ -8,7 +8,7 @@ import 'package:player_stats_23/components/PlayerDetailsRatingCard.dart';
 import 'package:player_stats_23/components/SkillsRating.dart';
 import 'package:player_stats_23/db/players22.dart';
 import 'package:flutter/material.dart';
-//import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class PlayerDetails extends ConsumerStatefulWidget {
@@ -24,7 +24,7 @@ class _PlayerDetailsState extends ConsumerState<PlayerDetails> {
   @override
   var loading = true;
   var playerDetails = {};
-  //InterstitialAd? _interstitialAd;
+  InterstitialAd? _interstitialAd;
   bool fav = false;
 
   void initState() {
@@ -38,7 +38,7 @@ class _PlayerDetailsState extends ConsumerState<PlayerDetails> {
   }
 
   void addInterstitialAd() async {
-    /* InterstitialAd.load(
+    InterstitialAd.load(
         adUnitId: AdHelper.videoAdUnitId,
         request: AdRequest(),
         adLoadCallback: InterstitialAdLoadCallback(
@@ -52,12 +52,12 @@ class _PlayerDetailsState extends ConsumerState<PlayerDetails> {
           onAdFailedToLoad: (LoadAdError error) {
             print('InterstitialAd failed to load: $error.');
           },
-        )); */
+        ));
   }
 
   void dispose() {
     super.dispose();
-    //_interstitialAd?.dispose();
+    _interstitialAd?.dispose();
   }
 
   void getPlayerData() async {
@@ -130,7 +130,7 @@ class _PlayerDetailsState extends ConsumerState<PlayerDetails> {
                           child: Text('Loading'),
                         ),
                       ))),
-        //BannerSmallAd(),
+        BannerSmallAd(),
       ]),
     );
   }
