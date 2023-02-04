@@ -23,7 +23,7 @@ void createListOfFields(int start, Function f) async {
   final con = await CsvToListConverter().convert(mydata);
   int j = 0;
   print(con[1][0].runtimeType);
-  for (int i = start; i < 18532; i++) {
+  for (int i = start; i < 18534; i++) {
     var player = Player(
       sofifaId: con[i][j++],
       playerUrl: con[i][j++],

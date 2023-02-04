@@ -54,8 +54,8 @@ class _SetUpLocalDbState extends State<SetUpLocalDb> {
   }
 
   void changeCompleted(int i) async {
-    print(i / 18532);
-    if (i == 18532) {
+    print(i / 18533);
+    if (i == 18533) {
       storage.write(key: 'db', value: 'done');
       setState(() {
         loading = false;
@@ -66,14 +66,14 @@ class _SetUpLocalDbState extends State<SetUpLocalDb> {
       return;
     }
     setState(() {
-      completed = i / 18532;
+      completed = i / 18533;
     });
   }
 
   void startSettingUpLocalDb() async {
     var start = await PlayersDatabase.instance.getNumberOfRows();
     print('Number of rows is $start');
-    if (start == 18532) {
+    if (start == 18533) {
       storage.write(key: 'db', value: 'done');
       setState(() {
         completed = 1;
