@@ -1,4 +1,4 @@
-package com.example.player_stats_23;
+package com.player_stats_23.player_stats_23;
 
 import android.content.Context;
 import android.view.LayoutInflater;

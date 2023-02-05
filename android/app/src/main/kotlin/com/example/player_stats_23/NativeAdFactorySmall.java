@@ -1,4 +1,4 @@
-package com.example.player_stats_23;
+package com.player_stats_23.player_stats_23;
 import com.google.android.gms.ads.nativead.MediaView;
 import com.google.android.gms.ads.nativead.NativeAd;
 import com.google.android.gms.ads.nativead.NativeAdView;
